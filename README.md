@@ -7,7 +7,7 @@ This document details the steps needed to run the script to amend the CellViT de
 git clone https://github.com/shivsakthivel/cellvit_annotations.git
 ```
 3. Move the manual annotations and CellViT outputs into the directory and the resultant structure should be as follows:
-  \ 
+
 📂 cellvit_annotations \
 ┣ 📂 annotations \
 ┃ ┗ 📜 wsi1_good10.geojson \
@@ -20,7 +20,7 @@ git clone https://github.com/shivsakthivel/cellvit_annotations.git
 ┃ ┗ 📜 wsi2_cell_detection.geojson \
 ┃ ┗ 📜 wsi2_cells.geojson \
 ┃ ┗ ... \
-\
+
 📜 classifier_changes.sh \
 📜 environment.yml \
 📜 process_changes.py \

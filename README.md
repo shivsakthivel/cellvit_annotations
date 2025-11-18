@@ -39,8 +39,8 @@ sbatch classifier_changes.sh
 ## Outputs
 The script is meant to take a folder of annotations and outputs and run the annotation changes in parallel. The outputs for each WSI will be as follows and by default will save to a new directory called `processed_annotations`:
 
-1. <wsi_id>_annotated_nuclei.csv: An intermediate output csv file with 4 columns, `detection_x` [The x-coordinate of the detection point], `detection_y` [The y-coordinate of the detection point], `contour` [The full segmentation contour for the matched detected nucleus] and `Classification` which is the changed classification of that nucleus using the manual annotation. All the nuclei not included in the manual annotations will still be included with their classification unchanged.
+1. `<wsi_id>_annotated_nuclei.csv`: An intermediate output csv file with 4 columns, `detection_x` [The x-coordinate of the detection point], `detection_y` [The y-coordinate of the detection point], `contour` [The full segmentation contour for the matched detected nucleus] and `Classification` which is the changed classification of that nucleus using the manual annotation. All the nuclei not included in the manual annotations will still be included with their classification unchanged.
    
-2. <wsi_id>_cell_detection.geojson: Detection geojson file
+2. `<wsi_id>_cell_detection.geojson`: Detection geojson file
 
-3. <wsi_id>_cells.geojson: Segmentation geojson file
+3. `<wsi_id>_cells.geojson`: Segmentation geojson file

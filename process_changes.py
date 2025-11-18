@@ -22,9 +22,13 @@ parser.add_argument('--output_dir', type=str, required=True, help='Directory to 
 args = parser.parse_args()
 
 def process_files_star(args):
+    """ Function to pass into the multiprocessor"""
     return process_files(*args)
 
 def change_classification(current_class, label):
+    """ Function to change the classifications based on the manual labels
+    [Add more combinations of changes if necessary] """
+    
     if label == 'good':
         return current_class
     
@@ -35,6 +39,8 @@ def change_classification(current_class, label):
         return 'Inflammatory'
 
 def process_files(detection_file, segmentation_file, annotation_file, output_dir, unique_id):
+    """ Processes the files for one WSI to make the necessary changes """
+    
     try:
         # Load the GeoJSON files
         with open(detection_file, "r") as f:
@@ -199,4 +205,6 @@ def main():
             pass
 
 if __name__ == "__main__":
+
     main()
+    

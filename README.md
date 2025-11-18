@@ -9,6 +9,7 @@ git clone https://github.com/shivsakthivel/cellvit_annotations.git
 3. Move the manual annotations and CellViT outputs into the directory and the resultant structure should be as follows:
 
 📂 cellvit_annotations \
+
 ┣ 📂 annotations \
 ┃ ┗ 📜 wsi1_good10.geojson \
 ┃ ┗ 📜 wsi2_good5_ts5.geojson \
@@ -24,3 +25,16 @@ git clone https://github.com/shivsakthivel/cellvit_annotations.git
 📜 classifier_changes.sh \
 📜 environment.yml \
 📜 process_changes.py \
+
+## Running the Script
+1. Create the conda environment as follows:
+```bash
+conda env create -f environment.yml
+```
+2. Submit the slurm script after checking that all the arguments are correct:
+```bash
+sbatch classifier_changes.sh
+```
+
+## Outputs
+The script is meant to take a folder of annotations and outputs and run the annotation changes in parallel.

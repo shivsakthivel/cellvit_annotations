@@ -24,7 +24,7 @@ git clone https://github.com/shivsakthivel/cellvit_annotations.git
 
 📜 classifier_changes.sh \
 📜 environment.yml \
-📜 process_changes.py \
+📜 process_changes.py
 
 ## Running the Script
 1. Create the conda environment as follows:
